@@ -1,15 +1,15 @@
-﻿namespace TodoListApplication
+﻿using TodoListApplication.TodoList;
+
+namespace TodoListApplication
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+            MainPage = new FrontPage();
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+      
     }
 }

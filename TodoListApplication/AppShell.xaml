@@ -8,6 +8,9 @@
     Shell.NavBarIsVisible="False"
     xmlns:frontPage="clr-namespace:TodoListApplication.TodoList"
     Title="TodoListApplication">
-
+    
+    <ShellContent>
+    </ShellContent>
+        
 
 </Shell>

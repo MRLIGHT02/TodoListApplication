@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TodoListApplication.TodoList.FrontPage"
-             Title="FrontPage">
-    <Grid>
-        
+<ContentPage
+    x:Class="TodoListApplication.TodoList.FrontPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FrontPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto">
+
+        <VerticalStackLayout>
+            <Grid Grid.Row="1">
+                <Label
+                    Margin="30"
+                    FontSize="30"
+                    HeightRequest="110"
+                    Text="Todo List" />
+                <Image
+                    Grid.Column="0"
+                    Margin="110,-10,30,40"
+                    HeightRequest="110"
+                    Source="pngwingcom.png" />
+            </Grid>
+
+            <Grid Grid.Row="2" ColumnDefinitions=" .5*,7*,2*,.5*">
+                <Entry Grid.Column="1" Placeholder="Enter Seach Item" />
+                <Button Grid.Column="2" Text="Add" />
+            </Grid>
+            
+
+        </VerticalStackLayout>
+
     </Grid>
 </ContentPage>

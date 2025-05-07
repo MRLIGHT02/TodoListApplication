@@ -14,7 +14,7 @@ namespace TodoListApplication
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-            builder.Services.AddDbContext(ApplicationDbContext<>)
+            
 
 #if DEBUG
     		builder.Logging.AddDebug();

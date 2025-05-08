@@ -22,9 +22,18 @@ public partial class FrontPage : ContentPage
     //        new DataFromTheUser{ItemData=itemofentery.Text}
     //    });
     private void Button_Clicked(object sender, EventArgs e)
-    {
-        var newItem = new DataFromTheUser { ItemData = itemofentery.Text };
-        DataCollection.Add(newItem);
+    {   
+     
+        var newItem = new DataFromTheUser { ItemData = itemofentery.Text?.Trim() };
+         DataCollection.Add(newItem);
+       
+
+        
+      
+            
+
+        
+        
     }
 
     private void Button_Clicked_1(object sender, EventArgs e)

@@ -25,7 +25,7 @@
             <!--  Input Section  -->
             <Grid Grid.Row="2" ColumnDefinitions=".5*,7*,2*,.5*">
                 <Entry
-                    x:Name="itemOfitem"
+                    x:Name="itemofentery"
                     Grid.Column="1"
                     Placeholder="Enter Search Item" />
                 <Button
@@ -38,7 +38,22 @@
             <ListView ItemsSource="{Binding DataCollection}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding ItemValue}" />
+                        <ViewCell>
+                            <StackLayout>
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    Text="{Binding ItemData}" />
+                                <Button
+                                    x:Name="btndelete"
+                                    Margin="10,-20,-10,0"
+                                    Clicked="Button_Clicked_1"
+                                    HeightRequest="40"
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="delete"
+                                    WidthRequest="110" />
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

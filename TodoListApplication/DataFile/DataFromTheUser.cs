@@ -2,27 +2,9 @@
 
 namespace TodoListApplication.DataFile;
 
-public class DataFromTheUser : INotifyPropertyChanged
+public class DataFromTheUser
 {
-    private string itemValue;
+    public string? ItemData { get; set; }
+   
 
-    public string ItemValue
-    {
-        get => itemValue;
-        set
-        {
-            if (itemValue != value)
-            {
-                itemValue = value;
-                OnPropertyChanged(nameof(ItemValue));
-            }
-        }
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void OnPropertyChanged(string propertyName)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
 }

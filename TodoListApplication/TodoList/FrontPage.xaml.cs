@@ -21,7 +21,7 @@ public partial class FrontPage : ContentPage
     //    {
     //        new DataFromTheUser{ItemData=itemofentery.Text}
     //    });
-    private void Button_Clicked(object sender, EventArgs e)
+    private void AddItemButtonClicked(object sender, EventArgs e)
     {   
      
         var newItem = new DataFromTheUser { ItemData = itemofentery.Text?.Trim() };
@@ -36,7 +36,7 @@ public partial class FrontPage : ContentPage
         
     }
 
-    private void Button_Clicked_1(object sender, EventArgs e)
+    private void DeleteItemButtonClicked(object sender, EventArgs e)
     {
         if(sender is Button btn && btn.BindingContext is DataFromTheUser item)
         {

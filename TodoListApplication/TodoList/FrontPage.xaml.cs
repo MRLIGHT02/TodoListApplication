@@ -29,6 +29,9 @@ public partial class FrontPage : ContentPage
 
     private void Button_Clicked_1(object sender, EventArgs e)
     {
-
+        if(sender is Button btn && btn.BindingContext is DataFromTheUser item)
+        {
+            DataCollection.Remove(item);
+        }
     }
 }
